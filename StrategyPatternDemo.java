@@ -55,19 +55,19 @@ public class StrategyPatternDemo {
     public static void main(String[] args) {
         Traveler traveler = new Traveler();
 
-        // Travel by car
+        //  by car
         traveler.setStrategy(new CarTravelStrategy());
         traveler.travel("Colombo");
 
-        // Travel by bicycle
+        //  by bicycle
         traveler.setStrategy(new BicycleTravelStrategy());
         traveler.travel("Pabahinna");
 
-        // Travel by train
+        //  by train
         traveler.setStrategy(new TrainTravelStrategy());
         traveler.travel("Kandy");
 
-        // Travel by plane
+        //  by plane
         traveler.setStrategy(new PlaneTravelStrategy());
         traveler.travel("New York");
     }
