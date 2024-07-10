@@ -1,8 +1,6 @@
-
 interface TravelStrategy {
     void travel(String destination);
 }
-
 
 class CarTravelStrategy implements TravelStrategy {
     @Override
@@ -11,14 +9,12 @@ class CarTravelStrategy implements TravelStrategy {
     }
 }
 
-
 class BicycleTravelStrategy implements TravelStrategy {
     @Override
     public void travel(String destination) {
         System.out.println("Travelling to " + destination + " by bicycle");
     }
 }
-
 
 class TrainTravelStrategy implements TravelStrategy {
     @Override
@@ -27,14 +23,12 @@ class TrainTravelStrategy implements TravelStrategy {
     }
 }
 
-
 class PlaneTravelStrategy implements TravelStrategy {
     @Override
     public void travel(String destination) {
         System.out.println("Travelling to " + destination + " by plane");
     }
 }
-
 
 class Traveler {
     private TravelStrategy strategy;
@@ -49,7 +43,6 @@ class Traveler {
         strategy.travel(destination);
     }
 }
-
 
 public class StrategyPatternDemo {
     public static void main(String[] args) {
