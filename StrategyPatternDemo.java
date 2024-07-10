@@ -19,6 +19,22 @@ class BicycleTravelStrategy implements TravelStrategy {
     }
 }
 
+// Implementation of TravelStrategy for traveling by train
+class TrainTravelStrategy implements TravelStrategy {
+    @Override
+    public void travel(String destination) {
+        System.out.println("Travelling to " + destination + " by train");
+    }
+}
+
+// Implementation of TravelStrategy for traveling by plane
+class PlaneTravelStrategy implements TravelStrategy {
+    @Override
+    public void travel(String destination) {
+        System.out.println("Travelling to " + destination + " by plane");
+    }
+}
+
 // Context class using a travel strategy
 class Traveler {
     private TravelStrategy strategy;
@@ -46,5 +62,13 @@ public class StrategyPatternDemo {
         // Travel by bicycle
         traveler.setStrategy(new BicycleTravelStrategy());
         traveler.travel("Pabahinna");
+
+        // Travel by train
+        traveler.setStrategy(new TrainTravelStrategy());
+        traveler.travel("Kandy");
+
+        // Travel by plane
+        traveler.setStrategy(new PlaneTravelStrategy());
+        traveler.travel("New York");
     }
 }
