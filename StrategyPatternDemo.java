@@ -32,13 +32,9 @@ class PlaneTravelStrategy implements TravelStrategy {
 
 class Traveler {
     private TravelStrategy strategy;
-
-    
     public void setStrategy(TravelStrategy strategy) {
         this.strategy = strategy;
     }
-
-    
     public void travel(String destination) {
         strategy.travel(destination);
     }
@@ -47,19 +43,18 @@ class Traveler {
 public class StrategyPatternDemo {
     public static void main(String[] args) {
         Traveler traveler = new Traveler();
-
         //  by car
         traveler.setStrategy(new CarTravelStrategy());
         traveler.travel("Colombo");
-
+        
         //  by bicycle
         traveler.setStrategy(new BicycleTravelStrategy());
         traveler.travel("Pabahinna");
-
+        
         //  by train
         traveler.setStrategy(new TrainTravelStrategy());
         traveler.travel("Kandy");
-
+        
         //  by plane
         traveler.setStrategy(new PlaneTravelStrategy());
         traveler.travel("New York");
