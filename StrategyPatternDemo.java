@@ -1,9 +1,9 @@
-// Interface defining the travel strategy
+
 interface TravelStrategy {
     void travel(String destination);
 }
 
-// Implementation of TravelStrategy for traveling by car
+
 class CarTravelStrategy implements TravelStrategy {
     @Override
     public void travel(String destination) {
@@ -11,7 +11,7 @@ class CarTravelStrategy implements TravelStrategy {
     }
 }
 
-// Implementation of TravelStrategy for traveling by bicycle
+
 class BicycleTravelStrategy implements TravelStrategy {
     @Override
     public void travel(String destination) {
@@ -19,7 +19,7 @@ class BicycleTravelStrategy implements TravelStrategy {
     }
 }
 
-// Implementation of TravelStrategy for traveling by train
+
 class TrainTravelStrategy implements TravelStrategy {
     @Override
     public void travel(String destination) {
@@ -27,7 +27,7 @@ class TrainTravelStrategy implements TravelStrategy {
     }
 }
 
-// Implementation of TravelStrategy for traveling by plane
+
 class PlaneTravelStrategy implements TravelStrategy {
     @Override
     public void travel(String destination) {
@@ -35,22 +35,22 @@ class PlaneTravelStrategy implements TravelStrategy {
     }
 }
 
-// Context class using a travel strategy
+
 class Traveler {
     private TravelStrategy strategy;
 
-    // Setter to change the strategy at runtime
+    
     public void setStrategy(TravelStrategy strategy) {
         this.strategy = strategy;
     }
 
-    // Method to perform travel using the current strategy
+    
     public void travel(String destination) {
         strategy.travel(destination);
     }
 }
 
-// Demo class to demonstrate the strategy pattern
+
 public class StrategyPatternDemo {
     public static void main(String[] args) {
         Traveler traveler = new Traveler();
